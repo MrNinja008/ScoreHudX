@@ -87,6 +87,7 @@ class EventListener implements Listener{
 		(new PlayerTagUpdateEvent($player, new ScoreTag("basicscore.item_name", $item->getName())))->call();
 		(new PlayerTagUpdateEvent($player, new ScoreTag("basicscore.item_id", strval($item->getId()))))->call();
 		(new PlayerTagUpdateEvent($player, new ScoreTag("basicscore.item_meta", strval($item->getDamage()))))->call();
+                (new PlayerTagUpdateEvent($player, new ScoreTag("basicscore.xp", strval($player->getXpLevel()))))->call();
 		(new PlayerTagUpdateEvent($player, new ScoreTag("basicscore.item_count", strval($item->getCount()))))->call();
 	}
 }
